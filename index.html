@@ -13,55 +13,88 @@
       color: #c9d1d9;
     }
     header {
-      background-color: #161b22;
-      padding: 2rem;
+      background: linear-gradient(135deg, #161b22, #0d1117);
+      padding: 3rem 1rem;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       color: #58a6ff;
+      animation: fadeInDown 1s ease;
     }
     header p {
-      margin: 0.5rem 0 0;
-      font-size: 1.1rem;
+      margin: 0.8rem 0 0;
+      font-size: 1.2rem;
+      color: #8b949e;
+      animation: fadeInUp 1.2s ease;
     }
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
     }
     section {
-      margin-bottom: 2rem;
+      background: #161b22;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     }
     h2 {
-      border-bottom: 2px solid #30363d;
-      padding-bottom: 0.5rem;
+      margin-top: 0;
+      font-size: 1.4rem;
       color: #58a6ff;
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 0.5rem;
     }
     ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
     ul li {
-      margin: 0.5rem 0;
-      background: #161b22;
-      padding: 0.8rem;
+      margin: 0.6rem 0;
+      padding: 0.6rem;
       border-radius: 8px;
+      background: #0d1117;
+      transition: background 0.3s ease;
+    }
+    ul li:hover {
+      background: #21262d;
     }
     a {
       color: #58a6ff;
       text-decoration: none;
+      transition: color 0.2s ease;
     }
     a:hover {
+      color: #79c0ff;
       text-decoration: underline;
     }
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem;
       background-color: #161b22;
       font-size: 0.9rem;
       color: #8b949e;
+      margin-top: 2rem;
+    }
+    /* Animaciones */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -75,30 +108,29 @@
     <section>
       <h2>Sobre mí</h2>
       <p>
-        Soy un profesional pragmático y disruptivo con experiencia en Supply Chain, 
-        automatización y analítica de datos. Me apasiona la innovación, el desarrollo 
-        de aplicaciones y la optimización de procesos con tecnologías como Python, SQL, 
-        Power BI, Excel y herramientas de integración.
+        Profesional pragmático y disruptivo con experiencia en Supply Chain, automatización y analítica de datos. 
+        Apasionado por la innovación, el desarrollo de aplicaciones y la optimización de procesos con 
+        tecnologías como Python, SQL, Power BI, Excel y APIs de integración.
       </p>
     </section>
 
     <section>
-      <h2>Proyectos destacados</h2>
+      <h2>Proyectos</h2>
       <ul>
-        <li><strong>IoT con MQTT y Python:</strong> Desarrollo de soluciones de conectividad para dispositivos inteligentes.</li>
-        <li><strong>Automatización LinkedIn con Selenium:</strong> Programación de publicaciones usando Excel y scripts.</li>
-        <li><strong>Data Integration:</strong> Conexión entre AppSheet, Google Sheets, SQLite Cloud y Power BI.</li>
-        <li><strong>Celonis + Microsoft Graph API:</strong> Extracción y transformación de datos para procesos de negocio.</li>
+        <li><strong>IoT con MQTT y Python:</strong> Conectividad de dispositivos inteligentes.</li>
+        <li><strong>Automatización LinkedIn con Selenium:</strong> Publicaciones programadas con Excel.</li>
+        <li><strong>Data Integration:</strong> AppSheet, Google Sheets y SQLite Cloud.</li>
+        <li><strong>Celonis + Microsoft Graph API:</strong> Procesos de negocio con datos en tiempo real.</li>
       </ul>
     </section>
 
     <section>
-      <h2>Habilidades principales</h2>
+      <h2>Habilidades</h2>
       <ul>
-        <li>Python, SQL, Power BI, Excel (avanzado, macros, VBA)</li>
-        <li>Automatización de flujos con APIs (Google, Microsoft, Graph API)</li>
-        <li>Docker, GitHub, Flutter, Kivy, Bun, MQTT, ADK</li>
-        <li>Desarrollo de bots, apps y soluciones multiagente</li>
+        <li>Python, SQL, Power BI, Excel (VBA, macros)</li>
+        <li>Automatización con APIs (Google, Microsoft, Graph API)</li>
+        <li>Docker, GitHub, Flutter, Kivy, Bun, MQTT</li>
+        <li>Desarrollo de bots y soluciones multiagente</li>
       </ul>
     </section>
 
